@@ -5,19 +5,18 @@ class MyApp < Sinatra::Base
   register Sinatra::Reloader
 
   get '/kitties' do
-    send_file 'static/kitties.html'
+    @cats = %w(apple aubergin avocado brocoli cantelop carrot cashew cucumber garlic kiwi lemon lime papaya peach pickles pineappl pumking rhubarb rutebega thyme tomato watermel zuchinni)
+
+    erb :kitties
   end
 
-  get '/kitties/apple' do
-    send_file 'static/kitties/apple.html'
+  get '/kitties/:name' do
+    erb :kitty
   end
 
-  get '/kitties/watermel' do
-    send_file 'static/kitties/watermel.html'
-  end
 
   get '/' do
-    send_file 'static/index.html'
+    erb :index
   end
 
   get '/best-names' do
