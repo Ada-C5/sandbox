@@ -1,9 +1,6 @@
 require 'sinatra'
-require 'sinatra/reloader'
 
 class MyApp < Sinatra::Base
-  register Sinatra::Reloader
-
   get '/' do
     send_file 'static/index.html'
   end
