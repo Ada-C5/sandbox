@@ -4,6 +4,18 @@ require 'sinatra/reloader'
 class MyApp < Sinatra::Base
   register Sinatra::Reloader
 
+  get '/kitties' do
+    send_file 'static/kitties.html'
+  end
+
+  get '/kitties/apple' do
+    send_file 'static/kitties/apple.html'
+  end
+
+  get '/kitties/watermel' do
+    send_file 'static/kitties/watermel.html'
+  end
+
   get '/' do
     send_file 'static/index.html'
   end
