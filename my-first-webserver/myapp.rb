@@ -1,9 +1,6 @@
 require 'sinatra'
-require 'sinatra/reloader'
 
 class MyApp < Sinatra::Base
-  register Sinatra::Reloader
-
   get '/kitties' do
     @cats = %w(apple aubergin avocado brocoli cantelop carrot cashew cucumber garlic kiwi lemon lime papaya peach pickles pineappl pumking rhubarb rutebega thyme tomato watermel zuchinni)
 
