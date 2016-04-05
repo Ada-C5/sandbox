@@ -1,6 +1,12 @@
 require 'sinatra'
 
 class MyApp < Sinatra::Base
+  get '/amazing' do
+    @favorite_animal = "Red Panda"
+    erb(:amazing)
+  end
+
+
   get '/' do
     send_file 'static/index.html'
   end
