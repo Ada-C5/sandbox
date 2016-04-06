@@ -17,23 +17,7 @@ class MyApp < Sinatra::Base
   end
 
   get '/best-names' do
-    send_file 'static/best-names-for-cats.html'
-  end
-
-
-  get '/awful' do
-    <<-CATS
-<h1>The <strong>Best</strong> Names for <em>Cats</em></h1>
-
-<ol>
-  <li><strong>Pickles</strong></li>
-  <li>Raquel Welch's Grape Jam</li>
-  <li>Grand Lord Snugglewumps</li>
-  <li>Thunderpaw the Destroyer</li>
-  <li>Impurrator Curiosa (shamelessly stolen from twitter)</li>
-  <li>Kitty Purry</li>
-</ol>
-CATS
+    erb :best_names
   end
 
   get '/bye' do
