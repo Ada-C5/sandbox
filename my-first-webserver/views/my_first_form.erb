@@ -1,0 +1,20 @@
+<% if @my_peep %>
+  <h1>
+    Hi <%= @my_peep.username %>!
+    I love <%= @my_peep.favorite_animal%> too!
+  </h1>
+<% end %>
+
+<div class="params">
+  <%= params %>
+</div>
+
+<form action="" method="post" accept-charset="utf-8">
+  <label for="username">Username</label>
+  <input type="text" name="peep[username]" value="" id="username">
+
+  <label for="fave-animal">Favorite Animal</label>
+  <input type="text" name="peep[favorite_animal]" value="" id="fave-animal">
+
+  <input type="submit" value="Submit">
+</form>
