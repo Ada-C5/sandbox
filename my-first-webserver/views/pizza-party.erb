@@ -1,0 +1,19 @@
+<h1>Kitty-Cat Pizza Party</h1>
+<form action="" method="post">
+<fieldset class="cat-checks">
+  <legend>Who's Coming to the Party?</legend>
+  <% @cats.each do |cat| %>
+    <label>
+      <input type="checkbox" name="guests[]" value="<%= cat %>">
+      <%= cat %>
+      </label>
+  <% end %>
+</fieldset>
+<!--   <fieldset>
+    <legend>Pizza Party by the Numbers</legend>
+    <label for="cat-amount">How many cats are coming to the party?</label>
+    <input type="number" id="cat-amount" value="5" name="number-of-cats">
+  </fieldset>
+ -->
+  <input type="submit" value="Plan your party!">
+</form>

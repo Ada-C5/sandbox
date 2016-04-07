@@ -10,11 +10,27 @@
 </div>
 
 <form action="" method="post" accept-charset="utf-8">
-  <label for="username">Username</label>
+  <fieldset>
+    <legend>My favorite pizza toppings are:</legend>
+
+    <fieldset>
+      <legend>Meats!</legend>
+      <label><input type="checkbox" name="toppings[meats][]" value="pepperoni">Pepperoni</label>
+      <label><input type="checkbox" name="toppings[meats][]" value="ham">Ham</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Veggies!</legend>
+      <label><input type="checkbox" name="toppings[veggies][]" value="mushrooms">Mushrooms</label>
+      <label><input type="checkbox" name="toppings[veggies][]" value="onions">Onions</label>
+    </fieldset>
+  </fieldset>
+
+<!--   <label for="username">Username</label>
   <input type="text" name="peep[username]" value="" id="username">
 
   <label for="fave-animal">Favorite Animal</label>
   <input type="text" name="peep[favorite_animal]" value="" id="fave-animal">
-
-  <input type="submit" value="Submit">
+ -->
+  <input type="submit" value="Choose">
 </form>
