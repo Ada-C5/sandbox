@@ -1,0 +1,6 @@
+<h1>Your favorite Pokemon is <%= @monster.name %>!</h1>
+<% @monster.sprite_urls.each do |url| %>
+  <%= image_tag url, alt: @monster.name %>
+<% end %>
+
+<%= link_to "Home", root_path %>
